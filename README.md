@@ -1,6 +1,5 @@
 # BookScanner
 
-# English
 ## ⭐ Note
 This repository contains a fragment of a larger project currently in development. It is intended to showcase the code structure and UI. 
 The videos included present a recording of the original, partially implemented aplication.
