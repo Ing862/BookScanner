@@ -3,7 +3,7 @@ package com.ingwoj.bookscanner.userServices
 import com.ingwoj.bookscanner.R
 import java.util.Calendar
 
-// Int because R.string is and int number
+// Int because R.string is an int number
 interface Validator {
     fun validate(value: String): Int?
 }

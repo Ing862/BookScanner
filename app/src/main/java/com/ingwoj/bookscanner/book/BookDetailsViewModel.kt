@@ -19,17 +19,17 @@ class BookDetailsViewModel() : ViewModel() {
         viewModelScope.launch {
             _state.value = BookUiState.Loading
 
-            Log.d("API", "przed szukaniem")
+            Log.d("API", "before search")
 
-            val result = repository.searchBooksByISBN(isbn, 1) // FIXME: Null w wyszukiwaniu
-            Log.d("API", "po szukaniu")
+            val result = repository.searchBooksByISBN(isbn, 1) // FIXME: Null in search
+            Log.d("API", "after search")
 
             result.onSuccess { data ->
                 Log.d("API_DEBUG", "items: ${data.items}")
                 Log.d("API_DEBUG", "items size: ${data.items?.size}")
                 val book = data.items.firstOrNull()
                 _state.value = BookUiState.Success(data, book)
-                Log.d("API_BOOK", "znalazło książkę: $isbn")
+                Log.d("API_BOOK", "found book: $isbn")
             }
             result.onFailure { error ->
                 _state.value = BookUiState.Error(error.message ?: "Unknown error")

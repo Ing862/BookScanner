@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
     private var welcomeBinding: FirstWelcomeLayoutBinding? = null
     private var mainBinding: MainLayoutBinding? = null
 
-    //TODO: change to MVVM
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -81,7 +79,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //    TODO: duplicate function in RegisterActivity!!!
     fun loadFragment(fragment: Fragment, containerView: Int){
         val fragmentManager = supportFragmentManager
 

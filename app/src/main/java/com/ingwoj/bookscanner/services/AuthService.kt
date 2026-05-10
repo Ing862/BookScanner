@@ -20,7 +20,7 @@ import kotlinx.coroutines.tasks.await
 class AuthService() {
     private val auth: FirebaseAuth = Firebase.auth
 
-    // TODO: to chyba nie powinno tu być ale spoko
+    // FIXME: should not be there ???
     private val db = FirebaseFirestore.getInstance()
     private val data = UserDataSource(db)
     private val repo = UserRepository(data)

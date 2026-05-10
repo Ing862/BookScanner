@@ -32,7 +32,6 @@ class UserProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // TODO: pobierz dane z bazy danych i wyświetl
         //binding.profileUsername.setText()
 
         val settingsMenuButton = binding.settingsBtn
